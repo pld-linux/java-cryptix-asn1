@@ -16,7 +16,7 @@ BuildRequires:	cryptix
 BuildRequires:	gnu.getopt
 BuildRequires:	jakarta-ant >= 1.5
 BuildRequires:	jakarta-log4j
-BuildRequires:	jikes
+#BuildRequires:	jikes
 BuildRequires:	junit
 Requires:	cryptix
 BuildArch:	noarch
