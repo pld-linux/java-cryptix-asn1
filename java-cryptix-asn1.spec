@@ -9,6 +9,7 @@ Group:		Development/Languages/Java
 URL:		http://cryptix-asn1.sf.net
 # http://www.rtfm.com/cgi-bin/distrib.cgi?Cryptix-asn1-20011119.tar.gz
 Source0:	Cryptix-asn1-%{snap}.tar.gz
+# Source0-md5:	ac4080eee24b1cf0a476cee4fe501149
 Source1:	%{name}.build.xml
 Requires:	cryptix
 BuildRequires:	jakarta-ant >= 1.5
