@@ -12,6 +12,7 @@ Source0:	Cryptix-asn1-%{snap}.tar.gz
 # Source0-md5:	ac4080eee24b1cf0a476cee4fe501149
 Source1:	%{name}.build.xml
 URL:		http://cryptix-asn1.sf.net/
+Patch0:		%{name}-java-1.5.patch
 BuildRequires:	cryptix
 BuildRequires:	gnu.getopt
 BuildRequires:	jakarta-ant >= 1.5
@@ -32,6 +33,7 @@ Pakiet kryptograficzny Javy zawieraj±cy implementacjê ASN1.
 
 %prep
 %setup -q -n Cryptix-asn1-%{snap}
+%patch0 -p1
 cp %{SOURCE1} build.xml
 find . -name "*.jar" -exec rm -f {} \;
 
