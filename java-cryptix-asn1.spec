@@ -15,7 +15,7 @@ URL:		http://cryptix-asn1.sf.net/
 Patch0:		%{name}-java-1.5.patch
 BuildRequires:	cryptix
 BuildRequires:	gnu.getopt
-BuildRequires:	jakarta-ant >= 1.5
+BuildRequires:	ant >= 1.5
 BuildRequires:	jakarta-log4j
 #BuildRequires:	jikes
 BuildRequires:	junit
