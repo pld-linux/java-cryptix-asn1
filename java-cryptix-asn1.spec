@@ -11,11 +11,11 @@ Group:		Development/Languages/Java
 Source0:	Cryptix-asn1-%{snap}.tar.gz
 # Source0-md5:	ac4080eee24b1cf0a476cee4fe501149
 Source1:	%{name}.build.xml
-URL:		http://cryptix-asn1.sf.net/
+URL:		http://cryptix-asn1.sourceforge.net/
 Patch0:		%{name}-java-1.5.patch
+BuildRequires:	ant >= 1.5
 BuildRequires:	cryptix
 BuildRequires:	gnu.getopt
-BuildRequires:	ant >= 1.5
 BuildRequires:	jakarta-log4j
 #BuildRequires:	jikes
 BuildRequires:	junit
