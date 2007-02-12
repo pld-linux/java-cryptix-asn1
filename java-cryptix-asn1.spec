@@ -1,7 +1,7 @@
 %define		snap		20011119
 
 Summary:	Cryptix ASN1 implementation
-Summary(pl):	Implementacja Cryptix ASN1
+Summary(pl.UTF-8):   Implementacja Cryptix ASN1
 Name:		cryptix-asn1
 Version:	0.%{snap}
 Release:	0.1
@@ -28,8 +28,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Java crypto package containing ASN1 implementation.
 
-%description -l pl
-Pakiet kryptograficzny Javy zawieraj±cy implementacjê ASN1.
+%description -l pl.UTF-8
+Pakiet kryptograficzny Javy zawierajÄ…cy implementacjÄ™ ASN1.
 
 %prep
 %setup -q -n Cryptix-asn1-%{snap}
