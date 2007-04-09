@@ -16,9 +16,11 @@ Patch0:		%{name}-java-1.5.patch
 BuildRequires:	ant >= 1.5
 BuildRequires:	cryptix
 BuildRequires:	gnu.getopt
-BuildRequires:	jakarta-log4j
 #BuildRequires:	jikes
+BuildRequires:	jpackage-utils
 BuildRequires:	junit
+BuildRequires:	logging-log4j
+BuildRequires:	rpmbuild(macros) >= 1.300
 Requires:	cryptix
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -38,7 +40,7 @@ cp %{SOURCE1} build.xml
 find . -name "*.jar" -exec rm -f {} \;
 
 %build
-ant clean jar javadoc
+%ant clean jar javadoc
 
 %install
 rm -rf $RPM_BUILD_ROOT
