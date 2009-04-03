@@ -1,3 +1,6 @@
+# TODO:
+# does it realy uses system gnu-getopt and log4j?
+
 %define		snap		20011119
 
 Summary:	Cryptix ASN1 implementation
@@ -15,11 +18,11 @@ URL:		http://cryptix-asn1.sourceforge.net/
 Patch0:		%{name}-java-1.5.patch
 BuildRequires:	ant >= 1.5
 BuildRequires:	cryptix
-BuildRequires:	gnu.getopt
+BuildRequires:	java-gnu-getopt
+BuildRequires:	java-junit
+BuildRequires:	java-log4j
 #BuildRequires:	jikes
 BuildRequires:	jpackage-utils
-BuildRequires:	junit
-BuildRequires:	logging-log4j
 BuildRequires:	rpmbuild(macros) >= 1.300
 Requires:	cryptix
 BuildArch:	noarch
