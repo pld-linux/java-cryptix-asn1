@@ -1,0 +1,6 @@
+- renamed from cryptix-asn1.spec
+- dropped BRs: log4j, junit, gnu-getopt
+- added jdk bconds
+- added javadoc bcond
+- include java rpm macros
+- split javadoc into subpackage
