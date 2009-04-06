@@ -14,7 +14,7 @@ Summary:	Cryptix ASN1 implementation
 Summary(pl.UTF-8):	Implementacja Cryptix ASN1
 Name:		java-cryptix-asn1
 Version:	0.%{snap}
-Release:	0.1
+Release:	1
 License:	BSD-like
 Group:		Libraries/Java
 # http://www.rtfm.com/cgi-bin/distrib.cgi?Cryptix-asn1-20011119.tar.gz
