@@ -28,6 +28,7 @@ BuildRequires:	java-cryptix
 %{!?with_java_sun:BuildRequires:	java-gcj-compat-devel}
 %{?with_java_sun:BuildRequires:	java-sun}
 BuildRequires:	jpackage-utils
+BuildRequires:	rpm >= 4.4.9-56
 BuildRequires:	rpmbuild(macros) >= 1.300
 Requires:	java-cryptix
 BuildArch:	noarch
