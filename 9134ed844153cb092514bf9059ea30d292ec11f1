@@ -1,0 +1,2 @@
+- added rpm versioned BR (for %{pld_release} macro)
+- added line to last commit log (about splitting javadoc into subpackage)
