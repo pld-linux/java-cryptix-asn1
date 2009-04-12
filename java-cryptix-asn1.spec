@@ -14,7 +14,7 @@ Summary:	Cryptix ASN1 implementation
 Summary(pl.UTF-8):	Implementacja Cryptix ASN1
 Name:		java-cryptix-asn1
 Version:	0.%{snap}
-Release:	1
+Release:	2
 License:	BSD-like
 Group:		Libraries/Java
 # http://www.rtfm.com/cgi-bin/distrib.cgi?Cryptix-asn1-20011119.tar.gz
@@ -31,6 +31,8 @@ BuildRequires:	jpackage-utils
 BuildRequires:	rpm >= 4.4.9-56
 BuildRequires:	rpmbuild(macros) >= 1.300
 Requires:	java-cryptix
+Provides:	cryptix-asn1
+Obsoletes:	cryptix-asn1
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -39,6 +41,8 @@ Summary:	Online manual for %{srcname}
 Summary(pl.UTF-8):	Dokumentacja online do %{srcname}
 Group:		Documentation
 Requires:	jpackage-utils
+Provides:	cryptix-asn1-javadoc
+Obsoletes:	cryptix-asn1-javadoc
 
 %description javadoc
 Documentation for %{srcname}.
@@ -59,7 +63,7 @@ Pakiet kryptograficzny Javy zawierający implementację ASN1.
 %setup -q -n Cryptix-asn1-%{snap}
 %patch0 -p1
 cp %{SOURCE1} build.xml
-find . -name "*.jar" -exec rm -f {} \;
+find -name '*.jar' | xargs rm -f
 
 %build
 CLASSPATH=$(build-classpath cryptix)
@@ -67,7 +71,6 @@ CLASSPATH=$(build-classpath cryptix)
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 install -d $RPM_BUILD_ROOT%{_javadir}
 cp build/lib/*.jar $RPM_BUILD_ROOT%{_javadir}
 
