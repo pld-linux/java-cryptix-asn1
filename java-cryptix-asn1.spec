@@ -1,10 +1,4 @@
 %bcond_without	javadoc		# build api docs
-%if "%{pld_release}" == "ti"
-%bcond_without	java_sun	# build with gcj
-%else
-%bcond_with	java_sun	# build with java-sun
-%endif
-#
 %include	/usr/lib/rpm/macros.java
 
 %define		snap		20011119
@@ -25,10 +19,8 @@ URL:		http://cryptix-asn1.sourceforge.net/
 Patch0:		%{srcname}-java-1.5.patch
 BuildRequires:	ant >= 1.5
 BuildRequires:	java-cryptix
-%{!?with_java_sun:BuildRequires:	java-gcj-compat-devel}
-%{?with_java_sun:BuildRequires:	java-sun}
+BuildRequires:	jdk
 BuildRequires:	jpackage-utils
-BuildRequires:	rpm >= 4.4.9-56
 BuildRequires:	rpmbuild(macros) >= 1.300
 Requires:	java-cryptix
 Provides:	cryptix-asn1
