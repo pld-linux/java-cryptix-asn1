@@ -21,6 +21,7 @@ BuildRequires:	ant >= 1.5
 BuildRequires:	java-cryptix
 BuildRequires:	jdk
 BuildRequires:	jpackage-utils
+BuildRequires:	rpm-javaprov
 BuildRequires:	rpmbuild(macros) >= 1.300
 Requires:	java-cryptix
 Provides:	cryptix-asn1
