@@ -29,6 +29,12 @@ Obsoletes:	cryptix-asn1
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+%description
+Java crypto package containing ASN1 implementation.
+
+%description -l pl.UTF-8
+Pakiet kryptograficzny Javy zawierający implementację ASN1.
+
 %package javadoc
 Summary:	Online manual for %{srcname}
 Summary(pl.UTF-8):	Dokumentacja online do %{srcname}
@@ -45,12 +51,6 @@ Dokumentacja do %{srcname}.
 
 %description javadoc -l fr.UTF-8
 Javadoc pour %{srcname}.
-
-%description
-Java crypto package containing ASN1 implementation.
-
-%description -l pl.UTF-8
-Pakiet kryptograficzny Javy zawierający implementację ASN1.
 
 %prep
 %setup -q -n Cryptix-asn1-%{snap}
