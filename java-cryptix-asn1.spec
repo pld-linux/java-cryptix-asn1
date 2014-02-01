@@ -1,14 +1,13 @@
 %bcond_without	javadoc		# build api docs
-%include	/usr/lib/rpm/macros.java
 
 %define		snap		20011119
-
 %define		srcname		cryptix-asn1
+%include	/usr/lib/rpm/macros.java
 Summary:	Cryptix ASN1 implementation
 Summary(pl.UTF-8):	Implementacja Cryptix ASN1
 Name:		java-cryptix-asn1
 Version:	0.%{snap}
-Release:	2
+Release:	3
 License:	BSD-like
 Group:		Libraries/Java
 # http://www.rtfm.com/cgi-bin/distrib.cgi?Cryptix-asn1-20011119.tar.gz
@@ -24,7 +23,6 @@ BuildRequires:	jpackage-utils
 BuildRequires:	rpm-javaprov
 BuildRequires:	rpmbuild(macros) >= 1.300
 Requires:	java-cryptix
-Provides:	cryptix-asn1
 Obsoletes:	cryptix-asn1
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -40,7 +38,6 @@ Summary:	Online manual for %{srcname}
 Summary(pl.UTF-8):	Dokumentacja online do %{srcname}
 Group:		Documentation
 Requires:	jpackage-utils
-Provides:	cryptix-asn1-javadoc
 Obsoletes:	cryptix-asn1-javadoc
 
 %description javadoc
