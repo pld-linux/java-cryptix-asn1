@@ -2,7 +2,6 @@
 
 %define		snap		20011119
 %define		srcname		cryptix-asn1
-%include	/usr/lib/rpm/macros.java
 Summary:	Cryptix ASN1 implementation
 Summary(pl.UTF-8):	Implementacja Cryptix ASN1
 Name:		java-cryptix-asn1
