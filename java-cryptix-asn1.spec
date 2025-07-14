@@ -50,7 +50,7 @@ Javadoc pour %{srcname}.
 
 %prep
 %setup -q -n Cryptix-asn1-%{snap}
-%patch0 -p1
+%patch -P0 -p1
 cp %{SOURCE1} build.xml
 find -name '*.jar' | xargs rm -f
 
