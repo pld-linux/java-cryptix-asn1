@@ -1,12 +1,14 @@
 %bcond_without	javadoc		# build api docs
 
+%{?use_default_jdk:%use_default_jdk 8}
+
 %define		snap		20011119
 %define		srcname		cryptix-asn1
 Summary:	Cryptix ASN1 implementation
 Summary(pl.UTF-8):	Implementacja Cryptix ASN1
 Name:		java-cryptix-asn1
 Version:	0.%{snap}
-Release:	3
+Release:	4
 License:	BSD-like
 Group:		Libraries/Java
 # http://www.rtfm.com/cgi-bin/distrib.cgi?Cryptix-asn1-20011119.tar.gz
@@ -17,10 +19,10 @@ URL:		http://cryptix-asn1.sourceforge.net/
 Patch0:		%{srcname}-java-1.5.patch
 BuildRequires:	ant >= 1.5
 BuildRequires:	java-cryptix
-BuildRequires:	jdk
+%buildrequires_jdk
 BuildRequires:	jpackage-utils
 BuildRequires:	rpm-javaprov
-BuildRequires:	rpmbuild(macros) >= 1.300
+BuildRequires:	rpmbuild(macros) >= 1.556
 Requires:	java-cryptix
 Obsoletes:	cryptix-asn1
 BuildArch:	noarch
